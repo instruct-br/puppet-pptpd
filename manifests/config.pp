@@ -14,15 +14,8 @@ class pptpd::config {
     ensure  => $ensure,
     owner   => 'root',
     mode    => '0644',
-    content => template('pptpd/pptpd.conf.erb')
+    content => epp('pptpd/pptpd.conf.epp')
   }
-
-  $options_array = lookup(
-    'pptpd::options',
-    Array[String],
-    'unique',
-    []
-  )
 
   file { $pptpd::options_file:
     ensure  => $ensure,
@@ -31,7 +24,7 @@ class pptpd::config {
     content => epp('pptpd/pptpd-options.epp', {
       server_name => $pptpd::server_name,
       dns_servers => $pptpd::dns_servers,
-      options     => $pptpd::config::options_array,
+      options     => $pptpd::options,
     }),
   }
 }

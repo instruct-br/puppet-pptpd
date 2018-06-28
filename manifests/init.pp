@@ -24,6 +24,7 @@ class pptpd (
       }
     ]
   ]                                                             $users           = [],
+  Array                                                         $options         = [],
   Enum['present','installed','absent','purged','held','latest'] $package_ensure  = 'latest',
 ) {
   include pptpd::install
