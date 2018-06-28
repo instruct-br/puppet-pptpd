@@ -9,6 +9,10 @@
     {
       "name": "camptocamp/kmod",
       "version_requirement": ">= 2.2.0 < 3.0.0"
+    },
+    {
+      "name": "herculesteam/augeasproviders_sysctl",
+      "version_requirement": "2.0.2"
     }
   ],
   "operatingsystem_support": [

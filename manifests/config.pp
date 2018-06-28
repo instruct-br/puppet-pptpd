@@ -27,4 +27,11 @@ class pptpd::config {
       options     => $pptpd::options,
     }),
   }
+
+  if $pptpd::ip_forwarding {
+    sysctl { 'net.ipv4.ip_forward':
+      ensure => present,
+      value  => '1',
+    }
+  }
 }

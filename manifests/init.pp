@@ -25,6 +25,7 @@ class pptpd (
     ]
   ]                                                             $users           = [],
   Array                                                         $options         = [],
+  Boolean                                                       $ip_forwarding   = true,
   Enum['present','installed','absent','purged','held','latest'] $package_ensure  = 'latest',
 ) {
   include pptpd::install
