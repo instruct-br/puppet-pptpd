@@ -1,0 +1,4 @@
+---
+pptpd::package_ensure: latest
+pptpd::module_manage: true
+pptpd::package_name: pptpd

@@ -1,0 +1,10 @@
+# Managed by Puppet
+name <%= $server_name %>
+
+<% $dns_servers.each |$dns_server| { -%>
+ms-dns <%= $dns_server %>
+<% } -%>
+
+<% $options.each |$option| { -%>
+<%= $option %>
+<% } -%>
