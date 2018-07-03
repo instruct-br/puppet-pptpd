@@ -1,13 +1,13 @@
 # Managed by Puppet
-option <%= $pptpd::options_file %>
-localip <%= $pptpd::localip %>
-remoteip <%= $pptpd::remoteip %>
-stimeout <%= $pptpd::stimeout %>
-<% if $pptpd::logwtmp { %>logwtmp
+option <%= $options_file %>
+localip <%= $localip %>
+remoteip <%= $remoteip %>
+stimeout <%= $stimeout %>
+<% if $logwtmp { %>logwtmp
 <% } -%>
-<% if $pptpd::debug { %>debug
+<% if $debug { %>debug
 <% } -%>
-<% if $pptpd::bcrelay { %>bcrelay
+<% if $bcrelay { %>bcrelay
 <% } -%>
-<% if $pptpd::noipparam { %>noipparam
+<% if $noipparam { %>noipparam
 <% } -%>

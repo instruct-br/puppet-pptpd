@@ -14,7 +14,16 @@ class pptpd::config {
     ensure  => $ensure,
     owner   => 'root',
     mode    => '0644',
-    content => epp('pptpd/pptpd.conf.epp')
+    content => epp('pptpd/pptpd.conf.epp', {
+      options_file => $pptpd::options_file,
+      localip      => $pptpd::localip,
+      remoteip     => $pptpd::remoteip,
+      stimeout     => $pptpd::stimeout,
+      logwtmp      => $pptpd::logwtmp,
+      debug        => $pptpd::debug,
+      bcrelay      => $pptpd::bcrelay,
+      noipparam    => $pptpd::noipparam,
+    }),
   }
 
   file { $pptpd::options_file:

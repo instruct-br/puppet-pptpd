@@ -13,6 +13,9 @@ class pptpd::connections {
     selrole  => 'object_r',
     seltype  => 'usr_t',
     selrange => 's0',
-    content  => epp('pptpd/chap-secrets.epp'),
+    content  => epp('pptpd/chap-secrets.epp', {
+      users       => $pptpd::users,
+      server_name => $pptpd::server_name,
+    }),
   }
 }
