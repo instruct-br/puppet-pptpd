@@ -4,7 +4,7 @@
   "author": "Instructbr",
   "summary": "Install and manage PPTPD connections",
   "license": "proprietary",
-  "source": "https://github.com/thiagopena/puppet-pptpd",
+  "source": "https://github.com/instruct-br/puppet-pptpd",
   "dependencies": [
     {
       "name": "camptocamp/kmod",
@@ -23,18 +23,6 @@
       ]
     },
     {
-      "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "7"
-      ]
-    },
-    {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "16.04"
@@ -44,12 +32,6 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "9"
-      ]
-    },
-    {
-      "operatingsystem": "SLES",
-      "operatingsystemrelease": [
-        "12"
       ]
     }
   ],
